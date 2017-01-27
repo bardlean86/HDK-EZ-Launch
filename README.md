@@ -1,5 +1,5 @@
 # HDK EZ Launcher
-A very simple utility designed to help less technically inclined HDK users get started more easily.
+This program is designed to give you access to all the tools necessary for enjoying OSVR within one simple utility.
 
 MAKE SURE YOU RUN AS ADMINISTRATOR
 <ol>
