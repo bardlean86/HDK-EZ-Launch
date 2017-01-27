@@ -47,6 +47,9 @@ namespace HDK_Simple_Setup
 
         string samplePath = @"C:\Program Files\OSVR\Runtime\bin\RenderManagerD3DPresentExample3D.exe";
 
+        string PSMoveLocation = null;
+        string SteamVRLocation = null;
+
         public MainForm()
         {
             InitializeComponent();
@@ -119,6 +122,18 @@ namespace HDK_Simple_Setup
             else
             {
                 MessageBox.Show("Using 32-bit OSVR Runtime");
+            }
+
+            if (System.IO.Directory.Exists(@"C:\PS Move\"))
+            {
+                lblPSMoveCheck.Text = @"Found PS Move Service location";
+
+
+            }
+
+            else
+            {
+                lblPSMoveCheck.Text = @"PS Move Service not found. Please install to C:\PS Move\ in order for this to work.";
             }
 
         }
@@ -197,6 +212,21 @@ namespace HDK_Simple_Setup
             System.Diagnostics.Process.Start(samplePath);
             if (Is64BitVersion()) { System.Diagnostics.Process.Start(samplePath); }
             else { System.Diagnostics.Process.Start(samplePath_32); }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"C:\PS Move\PSMoveService.exe");
+        }
+
+        private void btnPSMoveConfig_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"C:\PS Move\PSMoveConfigTool.exe");
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
