@@ -45,10 +45,10 @@
             this.PSMove = new System.Windows.Forms.TabControl();
             this.OSVR = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lblPSMoveCheck = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnStartPSMove = new System.Windows.Forms.Button();
             this.btnPSMoveConfig = new System.Windows.Forms.Button();
+            this.lblPSMoveCheck = new System.Windows.Forms.Label();
+            this.btnStartPSMove = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -235,6 +235,28 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "PS Move";
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.Menu;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.btnPSMoveConfig);
+            this.panel5.Controls.Add(this.lblPSMoveCheck);
+            this.panel5.Controls.Add(this.btnStartPSMove);
+            this.panel5.Location = new System.Drawing.Point(7, 10);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(280, 312);
+            this.panel5.TabIndex = 1;
+            // 
+            // btnPSMoveConfig
+            // 
+            this.btnPSMoveConfig.Location = new System.Drawing.Point(15, 255);
+            this.btnPSMoveConfig.Name = "btnPSMoveConfig";
+            this.btnPSMoveConfig.Size = new System.Drawing.Size(250, 25);
+            this.btnPSMoveConfig.TabIndex = 1;
+            this.btnPSMoveConfig.Text = "PS Move Configuration";
+            this.btnPSMoveConfig.UseVisualStyleBackColor = true;
+            this.btnPSMoveConfig.Click += new System.EventHandler(this.btnPSMoveConfig_Click);
+            // 
             // lblPSMoveCheck
             // 
             this.lblPSMoveCheck.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -248,18 +270,6 @@
             this.lblPSMoveCheck.Text = "###";
             this.lblPSMoveCheck.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.SystemColors.Menu;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.btnPSMoveConfig);
-            this.panel5.Controls.Add(this.lblPSMoveCheck);
-            this.panel5.Controls.Add(this.btnStartPSMove);
-            this.panel5.Location = new System.Drawing.Point(7, 10);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(280, 312);
-            this.panel5.TabIndex = 1;
-            // 
             // btnStartPSMove
             // 
             this.btnStartPSMove.Location = new System.Drawing.Point(15, 211);
@@ -269,16 +279,6 @@
             this.btnStartPSMove.Text = "Start PS Move Service";
             this.btnStartPSMove.UseVisualStyleBackColor = true;
             this.btnStartPSMove.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // btnPSMoveConfig
-            // 
-            this.btnPSMoveConfig.Location = new System.Drawing.Point(15, 255);
-            this.btnPSMoveConfig.Name = "btnPSMoveConfig";
-            this.btnPSMoveConfig.Size = new System.Drawing.Size(250, 25);
-            this.btnPSMoveConfig.TabIndex = 1;
-            this.btnPSMoveConfig.Text = "PS Move Configuration";
-            this.btnPSMoveConfig.UseVisualStyleBackColor = true;
-            this.btnPSMoveConfig.Click += new System.EventHandler(this.btnPSMoveConfig_Click);
             // 
             // MainForm
             // 
@@ -291,7 +291,7 @@
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "HDK Setup Utility";
+            this.Text = "HDK EZ Launch";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
