@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HDK_Simple_Setup
+namespace EZ_Launch
 {
     public partial class MainForm : Form
     {

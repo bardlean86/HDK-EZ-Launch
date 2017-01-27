@@ -1,4 +1,4 @@
-﻿namespace HDK_Simple_Setup
+﻿namespace EZ_Launch
 {
     partial class MainForm
     {

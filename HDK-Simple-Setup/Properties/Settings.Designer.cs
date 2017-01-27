@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HDK_Simple_Setup.Properties
+namespace EZ_Launch.Properties
 {
 
 
