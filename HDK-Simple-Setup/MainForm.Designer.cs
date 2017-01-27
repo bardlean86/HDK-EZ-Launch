@@ -42,9 +42,9 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn3DSample = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.PSMove = new System.Windows.Forms.TabControl();
-            this.OSVR = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.container = new System.Windows.Forms.TabControl();
+            this.tab1 = new System.Windows.Forms.TabPage();
+            this.tab2 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnPSMoveConfig = new System.Windows.Forms.Button();
             this.lblPSMoveCheck = new System.Windows.Forms.Label();
@@ -53,9 +53,9 @@
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.PSMove.SuspendLayout();
-            this.OSVR.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.container.SuspendLayout();
+            this.tab1.SuspendLayout();
+            this.tab2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -197,43 +197,43 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "4: Test Direct Mode functionality";
             // 
-            // PSMove
+            // container
             // 
-            this.PSMove.Controls.Add(this.OSVR);
-            this.PSMove.Controls.Add(this.tabPage2);
-            this.PSMove.Location = new System.Drawing.Point(12, 12);
-            this.PSMove.Name = "PSMove";
-            this.PSMove.SelectedIndex = 0;
-            this.PSMove.Size = new System.Drawing.Size(307, 361);
-            this.PSMove.TabIndex = 4;
+            this.container.Controls.Add(this.tab1);
+            this.container.Controls.Add(this.tab2);
+            this.container.Location = new System.Drawing.Point(12, 12);
+            this.container.Name = "container";
+            this.container.SelectedIndex = 0;
+            this.container.Size = new System.Drawing.Size(307, 361);
+            this.container.TabIndex = 4;
             // 
-            // OSVR
+            // tab1
             // 
-            this.OSVR.BackColor = System.Drawing.Color.Orange;
-            this.OSVR.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.OSVR.Controls.Add(this.panel1);
-            this.OSVR.Controls.Add(this.panel4);
-            this.OSVR.Controls.Add(this.panel2);
-            this.OSVR.Controls.Add(this.panel3);
-            this.OSVR.Location = new System.Drawing.Point(4, 22);
-            this.OSVR.Name = "OSVR";
-            this.OSVR.Padding = new System.Windows.Forms.Padding(3);
-            this.OSVR.Size = new System.Drawing.Size(299, 335);
-            this.OSVR.TabIndex = 0;
-            this.OSVR.Text = "OSVR";
-            this.OSVR.Click += new System.EventHandler(this.tabPage1_Click);
+            this.tab1.BackColor = System.Drawing.Color.Orange;
+            this.tab1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tab1.Controls.Add(this.panel1);
+            this.tab1.Controls.Add(this.panel4);
+            this.tab1.Controls.Add(this.panel2);
+            this.tab1.Controls.Add(this.panel3);
+            this.tab1.Location = new System.Drawing.Point(4, 22);
+            this.tab1.Name = "tab1";
+            this.tab1.Padding = new System.Windows.Forms.Padding(3);
+            this.tab1.Size = new System.Drawing.Size(299, 335);
+            this.tab1.TabIndex = 0;
+            this.tab1.Text = "OSVR";
+            this.tab1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // tabPage2
+            // tab2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage2.Controls.Add(this.panel5);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(299, 335);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "PS Move";
+            this.tab2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.tab2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tab2.Controls.Add(this.panel5);
+            this.tab2.Location = new System.Drawing.Point(4, 22);
+            this.tab2.Name = "tab2";
+            this.tab2.Padding = new System.Windows.Forms.Padding(3);
+            this.tab2.Size = new System.Drawing.Size(299, 335);
+            this.tab2.TabIndex = 1;
+            this.tab2.Text = "PS Move";
             // 
             // panel5
             // 
@@ -285,7 +285,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(331, 385);
-            this.Controls.Add(this.PSMove);
+            this.Controls.Add(this.container);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -302,9 +302,9 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.PSMove.ResumeLayout(false);
-            this.OSVR.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
+            this.container.ResumeLayout(false);
+            this.tab1.ResumeLayout(false);
+            this.tab2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.ResumeLayout(false);
@@ -326,9 +326,9 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btn3DSample;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TabControl PSMove;
-        private System.Windows.Forms.TabPage OSVR;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabControl container;
+        private System.Windows.Forms.TabPage tab1;
+        private System.Windows.Forms.TabPage tab2;
         private System.Windows.Forms.Label lblPSMoveCheck;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnPSMoveConfig;

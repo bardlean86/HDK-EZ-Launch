@@ -59,7 +59,7 @@ namespace EZ_Launch
         {
             bool uses64Bit;
 
-            if(System.IO.Directory.Exists(@"C:\Program Files\OSVR\Runtime\bin") == true)
+            if (System.IO.Directory.Exists(@"C:\Program Files\OSVR\Runtime\bin") == true)
             {
                 uses64Bit = true;
             }
@@ -70,7 +70,7 @@ namespace EZ_Launch
             }
 
             return uses64Bit;
-            
+
         }
 
         public static bool IsUserAdministrator()
@@ -191,15 +191,13 @@ namespace EZ_Launch
         private void button2_Click(object sender, EventArgs e)
         {
             if (Is64BitVersion()) { System.Diagnostics.Process.Start(trackingCalibration); }
-            else{ System.Diagnostics.Process.Start(trackingCalibration_32); }
-
+            else { System.Diagnostics.Process.Start(trackingCalibration_32); }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             if (Is64BitVersion()) { System.Diagnostics.Process.Start(serverPath); }
             else { System.Diagnostics.Process.Start(serverPath_32); }
-
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -221,7 +219,21 @@ namespace EZ_Launch
 
         private void btnPSMoveConfig_Click(object sender, EventArgs e)
         {
+            System.IO.Directory.SetCurrentDirectory(@"C:\PS Move\");
             System.Diagnostics.Process.Start(@"C:\PS Move\PSMoveConfigTool.exe");
+        }
+
+        private void tab1_Click(object sender, EventArgs e)
+        {
+            if (Is64BitVersion())
+                System.IO.Directory.SetCurrentDirectory(binLocation);
+            else
+                System.IO.Directory.SetCurrentDirectory(binLocation_32);
+        }
+
+        private void tab2_Click(object sender, EventArgs e)
+        {
+            System.IO.Directory.SetCurrentDirectory(@"C:\PS Move\");
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
